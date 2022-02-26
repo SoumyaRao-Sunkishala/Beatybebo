@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var hairData = JSON.parse(localStorage.getItem("Hair"));
+
+var hairData = [
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/e/tea-tree-beard-oil_1.jpg",
+            name: "Mamaearth Tea Tree Beard Oil With Tea Tree & Salicylic Acid",
+            price: 449.00,
+            strikedoffprice: 499.00,
+
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/e/tea-tree-beard-oil_1.jpg",
+            name: "Mamaearth Onion Beard Oil With Onion & Redensyl For",
+            price: 449.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429534.jpg",
+            name: "Schwarzkopf Professional Bonacure Hyaluronic Moisture",
+            price: 950.00,
+            strikedoffprice: 1000.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787430523_2.jpg",
+            name: "Schwarzkopf Osis+ Curl Honey Curl Cream",
+            price: 698.00,
+            strikedoffprice: 750.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429633_2.jpg",
+            name: "Schwarzkopf Professional Bonacure Collagen Volume",
+            price: 846.00,
+            strikedoffprice: 900.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/accc6918906087777182_1.jpg",
+            name: "Mamaearth Cold Pressed Almond Oil & Vitamin E For",
+            price: 360.00,
+            strikedoffprice: 399.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429695_2.jpg",
+            name: "Schwarzkopf Professional Bonacure Keratin Smooth",
+            price: 930.00,
+            strikedoffprice: 1000.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/2/a23342b8904311901235_1.jpg",
+            name: "WOW Skin Science Moroccan Argan Oil Hair Conditioner",
+            price: 527.00,
+            strikedoffprice: 599.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311902027_1.jpg",
+            name: "WOW Skin Science Hair Mask For Dry And Damaged Hair",
+            price: 489.00,
+            strikedoffprice: 549.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311900788_1_1.jpg",
+            name: "WOW Skin Science Moroccan Argan Oil Shampoo - 300ml",
+            price: 489.00,
+            strikedoffprice: 549.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/n/y/nywowbndl0064.jpg",
+            name: "Wow Onion Hair Care Combo",
+            price: 1437.00,
+            strikedoffprice: 1597.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904304495512_1_.jpg",
+            name: "WOW Skin Science Coconut Milk Hair Conditioner",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/a/7af639c8904311904274__1_.jpg",
+            name: "WOW Skin Science Himalayan Rose Shampoo",
+            price: 395.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/e/ce32bed8906105613409_1.jpg",
+            name: "WOW Skin Science Amla Shampoo For Weak Roots &",
+            price: 395.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/6/e62cbed8906105615151_1.jpg",
+            name: "WOW Skin Science Rice Water Conditioner With Rice Water, Rice Keratin & Lavender Oil",
+            price: 386.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/d/9d9efa68904311902348_1.jpg",
+            name: "WOW Skin Science Red Onion Black Seed Oil Hair Mask",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/2/52_2.jpg",
+            name: "Garnier Fructis Hair Care Combo",
+            price: 300.00,
+            strikedoffprice: 325.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/1/21_12_5.jpg",
+            name: "Mamaearth Ubtan Nourishing Hair Removal Cream Kit, For",
+            price: 391.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/4/14_16_5.jpg",
+            name: "WOW Skin Science Coconut Milk Shampoo",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/3/139_1.jpg",
+            name: "Clinic Plus Strong & Thick Health Shampoo With Almond",
+            price: 655.00,
+            strikedoffprice: 770.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/e/tea-tree-beard-oil_1.jpg",
+            name: "Mamaearth Tea Tree Beard Oil With Tea Tree & Salicylic Acid",
+            price: 449.00,
+            strikedoffprice: 499.00,
+
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/e/tea-tree-beard-oil_1.jpg",
+            name: "Mamaearth Onion Beard Oil With Onion & Redensyl For",
+            price: 449.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429534.jpg",
+            name: "Schwarzkopf Professional Bonacure Hyaluronic Moisture",
+            price: 950.00,
+            strikedoffprice: 1000.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787430523_2.jpg",
+            name: "Schwarzkopf Osis+ Curl Honey Curl Cream",
+            price: 698.00,
+            strikedoffprice: 750.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429633_2.jpg",
+            name: "Schwarzkopf Professional Bonacure Collagen Volume",
+            price: 846.00,
+            strikedoffprice: 900.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/accc6918906087777182_1.jpg",
+            name: "Mamaearth Cold Pressed Almond Oil & Vitamin E For",
+            price: 360.00,
+            strikedoffprice: 399.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429695_2.jpg",
+            name: "Schwarzkopf Professional Bonacure Keratin Smooth",
+            price: 930.00,
+            strikedoffprice: 1000.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/2/a23342b8904311901235_1.jpg",
+            name: "WOW Skin Science Moroccan Argan Oil Hair Conditioner",
+            price: 527.00,
+            strikedoffprice: 599.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311902027_1.jpg",
+            name: "WOW Skin Science Hair Mask For Dry And Damaged Hair",
+            price: 489.00,
+            strikedoffprice: 549.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311900788_1_1.jpg",
+            name: "WOW Skin Science Moroccan Argan Oil Shampoo - 300ml",
+            price: 489.00,
+            strikedoffprice: 549.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/n/y/nywowbndl0064.jpg",
+            name: "Wow Onion Hair Care Combo",
+            price: 1437.00,
+            strikedoffprice: 1597.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904304495512_1_.jpg",
+            name: "WOW Skin Science Coconut Milk Hair Conditioner",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/a/7af639c8904311904274__1_.jpg",
+            name: "WOW Skin Science Himalayan Rose Shampoo",
+            price: 395.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/e/ce32bed8906105613409_1.jpg",
+            name: "WOW Skin Science Amla Shampoo For Weak Roots &",
+            price: 395.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/6/e62cbed8906105615151_1.jpg",
+            name: "WOW Skin Science Rice Water Conditioner With Rice Water, Rice Keratin & Lavender Oil",
+            price: 386.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/d/9d9efa68904311902348_1.jpg",
+            name: "WOW Skin Science Red Onion Black Seed Oil Hair Mask",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/2/52_2.jpg",
+            name: "Garnier Fructis Hair Care Combo",
+            price: 300.00,
+            strikedoffprice: 325.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/1/21_12_5.jpg",
+            name: "Mamaearth Ubtan Nourishing Hair Removal Cream Kit, For",
+            price: 391.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/4/14_16_5.jpg",
+            name: "WOW Skin Science Coconut Milk Shampoo",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/3/139_1.jpg",
+            name: "Clinic Plus Strong & Thick Health Shampoo With Almond",
+            price: 655.00,
+            strikedoffprice: 770.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/e/tea-tree-beard-oil_1.jpg",
+            name: "Mamaearth Tea Tree Beard Oil With Tea Tree & Salicylic Acid",
+            price: 449.00,
+            strikedoffprice: 499.00,
+
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/e/tea-tree-beard-oil_1.jpg",
+            name: "Mamaearth Onion Beard Oil With Onion & Redensyl For",
+            price: 449.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429534.jpg",
+            name: "Schwarzkopf Professional Bonacure Hyaluronic Moisture",
+            price: 950.00,
+            strikedoffprice: 1000.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787430523_2.jpg",
+            name: "Schwarzkopf Osis+ Curl Honey Curl Cream",
+            price: 698.00,
+            strikedoffprice: 750.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429633_2.jpg",
+            name: "Schwarzkopf Professional Bonacure Collagen Volume",
+            price: 846.00,
+            strikedoffprice: 900.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/accc6918906087777182_1.jpg",
+            name: "Mamaearth Cold Pressed Almond Oil & Vitamin E For",
+            price: 360.00,
+            strikedoffprice: 399.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429695_2.jpg",
+            name: "Schwarzkopf Professional Bonacure Keratin Smooth",
+            price: 930.00,
+            strikedoffprice: 1000.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/2/a23342b8904311901235_1.jpg",
+            name: "WOW Skin Science Moroccan Argan Oil Hair Conditioner",
+            price: 527.00,
+            strikedoffprice: 599.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311902027_1.jpg",
+            name: "WOW Skin Science Hair Mask For Dry And Damaged Hair",
+            price: 489.00,
+            strikedoffprice: 549.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311900788_1_1.jpg",
+            name: "WOW Skin Science Moroccan Argan Oil Shampoo - 300ml",
+            price: 489.00,
+            strikedoffprice: 549.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/n/y/nywowbndl0064.jpg",
+            name: "Wow Onion Hair Care Combo",
+            price: 1437.00,
+            strikedoffprice: 1597.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904304495512_1_.jpg",
+            name: "WOW Skin Science Coconut Milk Hair Conditioner",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/a/7af639c8904311904274__1_.jpg",
+            name: "WOW Skin Science Himalayan Rose Shampoo",
+            price: 395.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/e/ce32bed8906105613409_1.jpg",
+            name: "WOW Skin Science Amla Shampoo For Weak Roots &",
+            price: 395.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/6/e62cbed8906105615151_1.jpg",
+            name: "WOW Skin Science Rice Water Conditioner With Rice Water, Rice Keratin & Lavender Oil",
+            price: 386.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/d/9d9efa68904311902348_1.jpg",
+            name: "WOW Skin Science Red Onion Black Seed Oil Hair Mask",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/2/52_2.jpg",
+            name: "Garnier Fructis Hair Care Combo",
+            price: 300.00,
+            strikedoffprice: 325.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/1/21_12_5.jpg",
+            name: "Mamaearth Ubtan Nourishing Hair Removal Cream Kit, For",
+            price: 391.00,
+            strikedoffprice: 449.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/4/14_16_5.jpg",
+            name: "WOW Skin Science Coconut Milk Shampoo",
+            price: 435.00,
+            strikedoffprice: 499.00,
+        },
+        {
+            image: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/3/139_1.jpg",
+            name: "Clinic Plus Strong & Thick Health Shampoo With Almond",
+            price: 655.00,
+            strikedoffprice: 770.00,
+        },
+    ];
+    localStorage.setItem("hairData",JSON.stringify(hairData))
+</script>

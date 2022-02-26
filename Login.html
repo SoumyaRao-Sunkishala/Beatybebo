@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="download.png">
+    <style>
+        *
+        {
+            font-family: sans-serif;
+        }
+        h3 {
+            margin-left:5%;
+        }
+        #container
+        {
+            width: 90%;
+            height: 550px;
+            display: flex; 
+            /* border: red solid 1px; */
+        }
+        #container > div {
+            height:100%;
+            width:50%;
+            padding:8%;
+            /* border:1px solid red; */
+            margin-left:5%;
+        }
+        input
+        {
+            width: 97%;
+            height: 35px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input::placeholder
+        {
+            font-size: 15px;
+            margin-left: 20px;
+        }
+        
+        input[type="checkbox"]
+        {
+            cursor: pointer;
+            color: blue;
+        }
+        #check
+        {
+            width: 25px;
+            height: 25px;
+        }
+        button
+        {
+            width: 60%;
+            height: 40px;
+            /*border: red solid 1px;*/
+            background-color: rgb(51, 51, 53);
+            color: white;
+            font-size: 20px;
+            margin-bottom: 30px;
+            border: none;
+        }
+        button:hover
+        {
+            cursor: pointer;
+            background-color: palevioletred;
+        }
+        .menu {
+            width:100%;
+        }
+        p {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>CUSTOMER LOGIN</h3>
+        <div id="container"><div>
+        <h4 styles="margin-left:5%"">REGISTERED CUSTOMERS</h4>
+        <div>Email *
+        <input id="email" class="in" type="email" placeholder=""/>
+        </div>
+        <div>Password *
+        <input id="pass" class="in" type="password" placeholder="" />
+    </div>
+        <div style="display: flex;">
+        <input id="check" type="checkbox" />
+        <p>Keep me signed in</p>
+        </div>
+        <button>SIGN IN</button>
+        <br>
+    </div class=menu> 
+        <div>
+            <h4 styles="margin-left:5%"">NEW CUSTOMERS</h4>
+            <p>Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>
+            <button>CREATE ACCOUNT</button>
+        </div>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",login);
+    var regdUsers = JSON.parse(localStorage.getItem("UserDatabase"));
+
+    function login(event)
+    {
+        var email = document.querySelector("#email").value;
+        var pass = document.querySelector("#pass").value;
+        
+        
+        for(var i=0;i<regdUsers.length;i++)
+        {   
+            if(regdUsers[i].EmailAdd == email && regdUsers[i].Password == pass)
+            {
+                console.log("Sign in successful");
+                alert("Sign in Successful")
+                window.location.href="home.html";
+                return;
+            }
+           
+        }
+        alert("Username or password is wrong");
+    }
+</script>

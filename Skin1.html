@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+var skinData = JSON.parse(localStorage.getItem("SKIN"));
+
+var skinData = [
+    {
+        name:"Organic Harvest Organic Face Serum - Vitamin C",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/9/e97c65aorgaa00000054.jpg",
+        strikedoffprice: 745.00,
+        price: 670.00,
+    },
+    {
+        name:"O3+ Derma Cult 2% Salicylic Acid Serum For Acne, Blackheads, Pore Tightening",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/6/b650628o3xxx00000034_1.jpg",
+        strikedoffprice: 799.00,
+        price: 735.00,
+    },
+    {
+        name:"Organic Harvest Organic Face Toner- Vitamin C",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/c/5cbb65aorgaa00000056_1.jpg",
+        strikedoffprice: 495.00,
+        price: 446.00,
+    },
+    {
+        name:"Lotus Professional Rejuvina Herbcomplex Protective Lotion",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/w/h/whatsappimage2020-12-10at8.32.04pm_2048x2048.jpg",
+        strikedoffprice: 845.00,
+        price: 786.00,
+    },
+    {
+        name:"Wow Skin Science Himalayan Rose Foaming Face Wash",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/c/3ccdb6c8904311905097_2.jpg",
+        strikedoffprice: 650.00,
+        price: 593.00,
+    },
+    {
+        name:"O3+ Bright & White Mask",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/0/b0a0628o3xxx00000020_1.jpg",
+        strikedoffprice: 650.00,
+        price: 592.00,
+    },
+    {
+        name:"O3+ Cooling & Purifying Face Wash Normal To Oily Skin Dermal Zone",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/c/eca16288906060214604_1.jpg",
+        strikedoffprice: 490.00,
+        price: 445.00,
+    },
+    {
+        name:"O3+ Derma Cult 100% Bakuchiol Serum For Anti Ageing, Retinol Alternative",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/9/79523cdo3xxx00000035_1.jpg",
+        strikedoffprice: 740.00,
+        price: 666.00,
+    },
+    {
+        name:"O3+ Derma Cult 10% Niacinamide Serum For Acne Marks, Blemishes, Oil Balancing",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/4/143b628o3xxx00000033_1.jpg",
+        strikedoffprice: 840.00,
+        price: 745.00,
+    },
+    {
+        name:"O3+ Bright & White Cream Moisturing",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/e/fe5e628o3xxx00000019_1.jpg",
+        strikedoffprice: 650.00,
+        price: 585.00,
+    },
+    {
+        name:"O3+ Moisture Boost Glow Cream",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/9/f944628o3xxx00000018_1.jpg",
+        strikedoffprice: 650.00,
+        price: 585.00,
+    },
+    {
+        name:"O3+ Vitamin C Face Wash For Glow Skin",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/c/3c6b628o3xxx00000025_1.jpg",
+        strikedoffprice: 385.00,
+        price: 325.00,
+    },
+    {
+        name:"O3+ Derma Cult 25% Aha + Bha 2% Peeling Solution For Glowing Skin",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/d/4d43628o3xxx00000031_1.jpg",
+        strikedoffprice: 799.00,
+        price: 735.00,
+    },
+    {
+        name:"O3+ Professional Vitamin C Serum Glow With Glycolic Acid",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/3/63af628o3xxx00000012_1_1.jpg",
+        strikedoffprice: 920.00,
+        price: 847.00,
+    },
+    {
+        name:"WOW Skin Science Himalayan Rose Face & Body Scrub",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/c/3cd44a58904311905127_1_.jpg",
+        strikedoffprice: 339.00,
+        price: 299.00,
+    },
+    {
+        name:"Mamaearth Vitamin C Nourishing Cold Cream For Face & Body With Vitamin C",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/a/9a262018906087777229__7_.jpg",
+        strikedoffprice: 359.00,
+        price: 314.00,
+    },
+    {
+        name:"Mamaearth Coco Nourishing Cold Cream For Dry Skin With Coffee And Vitamin E",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/1/e1e02018906087777236__7_.jpg",
+        strikedoffprice: 319.00,
+        price: 289.00,
+    },
+    {
+        name:"WOW Skin Science Himalayan Rose Body Butter",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/5/d53e0be8904311902935_1.jpg",
+        strikedoffprice: 499.00,
+        price: 435.00,
+    },
+    {
+        name:"WOW Skin Science Aloe Vera Foaming Face Wash With Built-In Face Brush Extra",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/e/3e3197b8904311902652__5_.jpg",
+        strikedoffprice: 389.00,
+        price: 327.00,
+    },
+    {
+        name:"WOW Skin Science Coconut Milk & Argan Oil Body Lotion - No Mineral Oil",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/0/10a62778906105615045.jpg",
+        strikedoffprice: 399.00,
+        price: 340.00,
+    },
+    {
+        name:"WOW Skin Science Matte Finish Sunscreen Spf 35 Pa++",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/9/d99cb418906105612600_1_.jpg",
+        strikedoffprice: 399.00,
+        price: 375.00,
+    },
+    {
+        name:"WOW Skin Science Lavender & Rose Skin Mist Toner No Paraben Sulphate Free",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/n/y/nywow000085_2.jpg",
+        strikedoffprice: 499.00,
+        price: 435.00,
+    },
+    {
+        name:"WOW Skin Science Activated Charcoal Face Wash Bottle",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/a/6a75f668904311903505.jpg",
+        strikedoffprice: 399.00,
+        price: 340.00,
+    },
+    {
+        name:"WOW Skin Science Organic Apple Cider Vinegar Face Moisturizer",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/c/5caf7078904311902416_1.jpg",
+        strikedoffprice: 389.00,
+        price: 347.00,
+    },
+    {
+        name:"WOW Skin Science Blemish Care Serum",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/beb239c8904311904410__1_.jpg",
+        strikedoffprice: 499.00,
+        price: 436.00,
+    },
+    {
+        name:"WOW Skin Science Himalayan Rose Foaming Face Wash",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/c/3ccdb6c8904311905097_2.jpg",
+        strikedoffprice: 379.00,
+        price: 347.00,
+    },
+    {
+        name:"WOW Skin Science Vitamin C Glow Clay Face Mask",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/3/83b52d18904311903697__1_.jpg",
+        strikedoffprice: 599.00,
+        price: 527.00,
+    },
+    {
+        name:"WOW Skin Science 10-In-1 Active Day Cream SPF 20",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/1/11590e7nywow000099_1_.jpg",
+        strikedoffprice: 649.00,
+        price: 571.00,
+    },
+    {
+        name:"WOW Skin Science Retinol Face Cream",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/f/7f090be8904311901853_1.jpg",
+        strikedoffprice: 599.00,
+        price: 528.00,
+    },
+    {
+        name:"WOW Skin Science Skin Revive Nectar Moisturiser No Parabens And No",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/b/dbf4108wowxx00000096__1_.jpg",
+        strikedoffprice: 409.00,
+        price: 399.00,
+    },
+    {
+        name:"WOW Skin Science Ubtan Face & Body Scrub",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/1/81qfsjvfqpl._sl1500_.jpg",
+        strikedoffprice: 399.00,
+        price: 340.00,
+    },
+    {
+        name:"WOW Skin Science Shea Butter & Cocoa Butter Moisturizing Body Lotion",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/7/d74f7138904311900894.jpg",
+        strikedoffprice: 389.00,
+        price: 353.00,
+    },
+    {
+        name:"Organic Harvest Organic Day Cream - Vitamin C",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/b/7b9565aorgaa00000057.jpg",
+        strikedoffprice: 695.00,
+        price: 639.00,
+    },
+    {
+        name:"Lakme 9 To 5 Vitamin C+ Face Serum With 100% Real Kakadu Plum Extract",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/8/b8b121clakme00000134_2.jpg",
+        strikedoffprice: 599.00,
+        price: 557.00,
+    },
+    {
+        name:"Ponds Bright Beauty Vitamin C Face Serum Infused With Lemon Green",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/4/e493e27ponds00000053_1.jpg",
+        strikedoffprice: 529.00,
+        price: 504.00,
+    },
+    {
+        name:"Organic Harvest Organic Day Cream - Vitamin C",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/b/7b9565aorgaa00000057.jpg",
+        strikedoffprice: 695.00,
+        price: 639.00,
+    },
+    {
+        name:"Lakme 9 To 5 Vitamin C+ Face Serum With 100% Real Kakadu Plum Extract",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/8/b8b121clakme00000134_2.jpg",
+        strikedoffprice: 599.00,
+        price: 557.00,
+    },
+    {
+        name:"Ponds Bright Beauty Vitamin C Face Serum Infused With Lemon Green",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/4/e493e27ponds00000053_1.jpg",
+        strikedoffprice: 499.00,
+        price: 479.00,
+    },
+    {
+        name:"Aroma Magic 5 In 1 Facial Kit Salon Range",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/2/12_34_8.jpg",
+        strikedoffprice: 1249.00,
+        price: 1149.00,
+    },
+    {
+        name:"Lotus Professional Phyto-Rx Whitening & Brightening Serum & Night Crème Combo",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/_/1_210_12.jpg",
+        strikedoffprice: 1320.00,
+        price: 1216.00,
+    },
+    {
+        name:"Garnier Bright Complete VITAMIN C Serum Cream UV - Pack Of 2",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/_/1_1_1.jpeg",
+        strikedoffprice: 309.00,
+        price: 277.00,
+    },
+    {
+        name:"Garnier Cleanse & Treat Combo",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/3/53_2.jpg",
+        strikedoffprice: 848.00,
+        price: 786.00,
+    },
+    {
+        name:"Garnier Vitamin C Skincare Combo",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51_2.jpg",
+        strikedoffprice: 987.00,
+        price: 908.00,
+    },
+    {
+        name:"Mamaearth Vitamin C Under Eye Cream For Dark Circles, Vitamin C & Gotu Kola",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/9/19_12_4.jpg",
+        strikedoffprice: 998.00,
+        price: 897.00,
+    },
+    {
+        name:"Mamaearth Ubtan Cleansing Milk For Face, With Turmeric & Saffron For Gentle",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/3/13_17_7.jpg",
+        strikedoffprice: 349.00,
+        price: 297.00,
+    },
+    {
+        name:"WOW Skin Science Anti Aging Night Cream - 50ml",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/_/5_90_4.jpg",
+        strikedoffprice: 699.00,
+        price: 615.00,
+    },
+    {
+        name:"Beeone De Tan Facial Kit Free Face Serum",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/_/4_98_10.jpg",
+        strikedoffprice: 751.00,
+        price: 638.00,
+    },
+    {
+        name:"Mamaearth Ubtan Night Cream With Turmeric & Saffron For Skin Brightening",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/_/6_87_4.jpg",
+        strikedoffprice: 599.00,
+        price: 539.00,
+    },
+    {
+        name:"Beeone Whitening Glow Facial Kit Free Face Serum",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/2/12_34_4.jpg",
+        strikedoffprice: 690.00,
+        price: 631.00,
+    },
+    {
+        name:"Lotus Herbals Radiant Platinum Cellular Anti-Ageing Facial Kit - 37gm",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/2/12_34_3.jpg",
+        strikedoffprice: 1195.00,
+        price: 1076.00,
+    },
+    {
+        name:"Joy Revivify Vitamin C Face Wash With Mandarin Vitamin B5 & E - Pack Of 2",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/2/52_1.jpg",
+        strikedoffprice: 450.00,
+        price: 405.00,
+    },
+    {
+        name:"Colorbar Cellular Dry Oil Moisture Boosting Treatment",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/9/59.jpg",
+        strikedoffprice: 1200.00,
+        price: 1104.00,
+    },
+    {
+        name:"Plum Vitamin C Face Serum With Mandarin For Glowing Skin With Pure",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/9/49.jpg",
+        strikedoffprice: 550.00,
+        price: 495.00,
+    },
+    {
+        name:"Vaadi Herbals Anti Pollution Silver Cleansing Cream - Pack Of 2",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/8/48_2.jpg",
+        strikedoffprice: 679.00,
+        price: 593.00,
+    },
+    {
+        name:"L'Oreal Paris White Perfect Clinical Overnight Treatment Cream",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/8/38_3.jpg",
+        strikedoffprice: 1230.00,
+        price: 1170.00,
+    },
+    {
+        name:"NIVEA Naturally Good, Natural Lavender Body Lotion, For Dry Skin, No Parabens",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/t/5/t57.jpg",
+        strikedoffprice: 399.00,
+        price: 360.00,
+    },
+    {
+        name:"Vaadi Herbal Skin - Lightening Fruit Facial Kit",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/9/19_12_2.jpg",
+        strikedoffprice: 1220.00,
+        price: 1090.00,
+    },
+    {
+        name:"Lotus Professional Promen Power Cleanse Face Wash",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va138.jpg",
+        strikedoffprice: 396.00,
+        price: 336.00,
+    },
+    {
+        name:"Vaadi Herbals 24 Carat Gold Massage Gel With 24 Carat Gold Dust & Grape",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/7/17_14_4.jpg",
+        strikedoffprice: 430.00,
+        price: 320.00,
+    },
+    {
+        name:"Mamaearth Charcoal Face Wash With Activated Charcoal & Coffee For Oil",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va112.jpg",
+        strikedoffprice: 399.00,
+        price: 347.00,
+    },
+    {
+        name:"Vaseline Healthy Bright Daily Brightening Body Lotion - 400ml",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/k/k/kkk2.jpg",
+        strikedoffprice: 400.00,
+        price: 360.00,
+    },
+    {
+        name:"Lotus Professional DermoSpa Brazilian Sprinkle Of Youth Face Wash",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/2/129.jpg",
+        strikedoffprice: 498.00,
+        price: 428.00,
+    },
+    {
+        name:"Blue Heaven Make-Up Blender Sponge -Pack Of 2",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/8/08.jpeg",
+        strikedoffprice: 599.00,
+        price: 300.00,
+    },
+    {
+        name:"Lotus Herbals Apriscrub Fresh Apricot Scrub",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va87.jpg",
+        strikedoffprice: 485.00,
+        price: 437.00,
+    },
+    {
+        name:"Vaadi Herbals Chocolate & Strawberry Spa Facial Kit",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va83.jpg",
+        strikedoffprice: 1210.00,
+        price: 1060.00,
+    },
+    {
+        name:"Vaadi Herbals Lavender Anti -Ageing Spa Facial Kit",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va61.jpg",
+        strikedoffprice: 1290.00,
+        price: 1040.00,
+    },
+    {
+        name:"Lotus Professional Phyto-Rx Nourishing Creme Face Wash",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va56.jpg",
+        strikedoffprice: 395.00,
+        price: 356.00,
+    },
+    {
+        name:"Vaadi Herbals Sunshield Tan Control Sunscreen Lotion With Lilac Extract Spf",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va38.jpg",
+        strikedoffprice: 285.00,
+        price: 252.00,
+    },
+    {
+        name:"Lotus Herbals Safe Sunblock Cream Breezy Berry Pa+ Spf - 20",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va30.jpg",
+        strikedoffprice: 299.00,
+        price: 269.00,
+    },
+    {
+        name:"Vaadi Herbals Instaglow Pink Rose Face Wash",
+        image:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va7.jpg",
+        strikedoffprice: 305.00,
+        price: 285.00,
+    },
+];
+localStorage.setItem("skinData",JSON.stringify(skinData))
+</script>

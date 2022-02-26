@@ -1,0 +1,243 @@
+* {
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#container {
+    height:100vh;
+    width:100%;
+    position: relative;
+}
+
+#row1 {
+    display:flex;
+    position: relative;
+    justify-content: space-around;
+}
+ .col1 {
+    margin-left: 6%;
+}
+.col2 {
+    margin:auto;
+    /* border:1px solid red; */
+    padding-left: 2%;
+}
+.col3 {
+    padding-left:10%;
+    margin:auto;
+    /* border:1px solid red; */
+}
+/* from here onwards menu bar */
+.menu-bar {
+    width:100%;
+    background-color: #e95ea4;
+    margin:auto;
+    display:flex;
+}
+
+.space{
+    height: 20vh;
+}
+.menu-bar ul{
+    list-style: none;
+    color: white;
+    display: inline-flex;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 5px;
+    padding: 5px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.active,.menu-bar ul li:hover{
+    color: black;
+}
+
+.sub-menu-1{
+    display: none; 
+ }
+ .menu-bar ul li:hover .sub-menu-1{
+     display:block;
+     position: absolute;
+    background: white;
+     margin-top: 15px;
+     margin-left: 15px;
+ }
+ .menu-bar ul li:hover .sub-menu-1 ul {
+     display: block;     
+    margin: 10px; 
+    overflow: hidden; 
+    opacity: 1;  
+}
+.sub-menu-1 ul li a {
+    color:black;
+}
+.menu-bar ul{
+    list-style: none;
+    color: white;
+    display: inline-flex;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 5px;
+    padding: 5px;
+}
+.col3 ul li a{
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+}
+.active,.col3 ul li:hover{
+    color: black;
+}
+
+.sub-menu-1{
+    display: none; 
+ }
+ .col3 ul li:hover .sub-menu-1{
+     display:block;
+     position: absolute;
+    background: white;
+     margin-top: 15px;
+     margin-left: 15px;
+ }
+ .col3 ul li:hover .sub-menu-1 ul {
+     display: block;     
+    margin: 10px; 
+    overflow: hidden; 
+    opacity: 1;  
+}
+.sub-menu-1 ul li a {
+    color:black;
+}
+/* .inner-li{
+    background: white;
+}
+.inner-li li a{
+    color: black;
+} */
+
+.right {
+width:30%;
+padding:10px;
+padding-top:10px;
+color:white;
+text-align: right;
+  }
+  .categories {
+      width:90%;
+      display: flex;
+      border:1px solid black;
+      margin-left: 5%;
+      margin-top: 10px;
+  }
+  .c1 {
+      height:100%;
+      width:30%;
+  }
+  .c2 {
+      height:100%;
+      width:100%;
+  }
+.grid {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: (1,100px);
+    height:60%;
+    margin-right:5%;
+    margin-left:5%;
+    width:90%;
+    gap:10px;    
+    /* border:1px solid red; */
+}
+.grid > div {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
+    /* border:1px solid red; */
+}
+.new {
+    margin-right:5%;
+    margin-top:4%;
+    margin-left:5%;
+}
+p {
+    padding: :10px;
+    text-align: center;
+}
+h4 {
+    padding: 10px;
+    text-align: center;
+    color:rgb(233, 103, 146)
+}
+.flex {
+    margin:10px 0px 0px 5%;
+    display:flex;
+    gap:20px;
+}
+.box1 {
+    height:100px;
+    width: 90%;
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: (1,150px);
+    /* border:1px solid red; */
+    margin: auto;
+}
+.box1 > div {
+    margin: auto;
+    text-align: center;
+    /* border:1px solid black; */
+}
+.box2 {
+    height:60%;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: (1,150px);
+    /* border:1px solid red; */
+    margin: auto;
+    padding: 0% 5% 0% 5%;
+}
+
+.box2 > div {
+    border:1px solid red;
+}
+
+/* footer styles */
+#footer {
+    width:100%;
+    height:550px;
+    background-color: #343a40;
+    padding:80px;
+}
+
+#others {
+    height:70%;
+    width:100%;
+    margin-left: 20px;
+    display: flex;
+}
+.sub-links {
+    cursor: pointer;
+    color: rgb(145, 43, 60);
+    width:30%;
+    height:100%;
+}
+.title {
+    color: #fff;
+font-size: 20px;
+margin-bottom: 30px;
+font-weight: 600;
+}
+.links {
+    color: #97a7af;
+font-weight: 600;
+font-size: 16px;
+text-decoration: underline transparent;
+}
+.icon-color {
+    color:#979da3;
+    font-size: 30px;
+}

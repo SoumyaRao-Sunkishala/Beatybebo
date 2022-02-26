@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="download.png">
+    <style>
+        *
+        {
+            font-family: sans-serif;
+        }
+        .nav {
+            text-align: center;
+        }
+        #container
+        {
+            width: 45%;
+            height: 550px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
+            /*border: red solid 1px;*/
+            margin:auto;
+        }
+        .fn {
+            display:flex;
+            gap:20px;
+        }
+        .in
+        {
+            width: 97%;
+            height: 43px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            border: 0.5px solid grey;
+        }
+        .in::placeholder
+        {
+            font-size: 15px;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        
+        input[type="checkbox"]
+        {
+            cursor: pointer;
+            color: blue;
+        }
+        .check1{
+            display:flex;
+        }
+        #check
+        {
+            width:15px;
+            height: 25px;
+        }
+        p
+        {
+            font-size: 14px;
+        }
+        button
+        {
+            width: 40%;
+            height: 43px;
+            background-color: rgb(127, 128, 127);
+            color: white;
+            font-size: 20px;
+            margin-bottom: 30px;
+            border: none;
+        }
+        button:hover
+        {
+
+            cursor: pointer;
+            background-color: palevioletred;
+        }
+
+    </style>
+</head>
+<body>
+    <hr>
+    <div class="nav">
+    <h3>CREATE NEW CUSTOMER ACCOUNT</h3>
+    </div>  
+    <div id="container">
+        <h3>PERSONAL INFORMATION</h3>
+        <div class="fn">
+            <div>First Name *
+        <input id="fn" class="in" type="text" placeholder=""/>
+    </div>
+    <div>Last Name *
+        <input id="sn" class="in" type="text" placeholder=""/>
+    </div>
+    </div>
+        <div class="check1">
+        <input id="check" type="checkbox" />
+        <p>Sign up for Newsletter</p>
+    </div>
+    <div>Email *
+        <input id="email" class="in" type="email" placeholder=""/>
+    </div>
+    <div>Phone *
+        <input id="phone" class="in" type="phone" placeholder=""/>
+    </div>
+    <div>Password *
+        <input id="pass" class="in" type="password" placeholder="" />
+    </div>
+    <div>Confirm Password *
+        <input id="cpass" class="in" type="password" placeholder="" />
+    </div>
+
+        <div style="display: flex;">
+        </div>
+        <button>Create an Account</button>
+        <br>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",formSubmit);
+    var userStack = JSON.parse(localStorage.getItem("UserDatabase"))||[];
+    
+    function formSubmit(event)
+    {
+        var fn = document.querySelector("#fn").value;
+        var sn = document.querySelector("#sn").value;
+        var email = document.querySelector("#email").value;
+        var phone=document.querySelector("phone".value;)
+        var pass = document.querySelector("#pass").value;
+        var cpass=document.querySelector("#cpass").value;
+
+        var userData = {
+        FirstName:fn,
+        SurNAme:sn,
+        EmailAdd:email,
+        Phone:phone,
+        Password:pass,
+        Cpassword:cpass
+        }
+       // console.log(userData);
+        userStack.push(userData);
+       // console.log(userStack)
+       localStorage.setItem("UserDatabase",JSON.stringify(userStack));
+       alert("Signup Success");
+       window.location.href="Signin.html";
+    }    
+</script>
